@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+     <style>
+      .error{
+        color: brown;
+
+      }
+      
+     </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/insat.1.jpg" alt="Logo" width="30" height="40" class="d-inline-block align-text-top">
+                    Insta
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gallery
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Photo</a></li>
+                      <li><a class="dropdown-item" href="#">Video</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="services.html">services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active bg-primary text-white" href="contact.html">contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+              <form id="contactForm" onsubmit="return validate()">
+                <h1>Contact Us</h1>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="lable-control">Name</label>
+                        <input class="form-control" type="text" id="Name" name="Name" placeholder="Enter Your Name">
+                        <span class="text-danger" id="nameerror"> </span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="lable-control">Email</label>
+                        <input class="form-control" type="text" id="email" name="email" placeholder="Enter Your Email">
+                        <span class="text-danger" id="emailerror"> </span>
+        
+                        </div>
+        
+
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="lable-control">Phone</label>
+                        <input class="form-control" type="number" name="Phone" id="Phone" placeholder="Enter Your Number">
+                        <span class="text-danger" id="Phoneerror"> </span>
+        
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="lable-control">AlternetPhone</label>
+                        <input class="form-control" type="number" id="AlternetPhone" name="AlternetPhone" placeholder="Enter Your Address">
+                        <span class="text-danger" id="alternetPhoneerror"> </span>
+        
+                        </div>
+        
+
+                    </div>
+                    <Div class="mb-3">
+                      <label class="lable-control">Address</label>
+                  <input class="form-control" type="text" name="Address" id="Address" placeholder="Enter Your Number">
+                  <span class="text-danger" id="Address"> </span>
+                  </Div>
+
+
+
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div>
+                      <select class="form-select">
+                        <option class="Redeonly">Select The Contery</option>
+                        <option>India</option>
+                        <option>Shrelanka</option>
+                        <option>UK</option>
+                        <option>Us</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="col-md-4">
+                    <div>
+                      <select class="form-select">
+                        <option class="Redonly">Select The City</option>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                        <option>Nagpur</option>
+                        <option>Nashik</option>
+                      </select>
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="col-md-4">
+                    <input class="form-control" type="number" placeholder=" Zip Code ">
+                    
+                    
+                  </div>
+                </div>
+
+                
+
+                
+
+                
+
+                
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                  </div>
+                  <div >
+
+                  <div>
+                      <label class="form-check-label" >Gender</label>
+
+                  </div>
+
+                    
+                    <div class="form-check">
+                      
+                      <input class="form-check-input" type="radio" name="gender">Male
+
+                    </div>
+                    <div class="form-check">
+                      
+                      <input class="form-check-input" type="radio" name="gender">Female
+
+                    </div>
+                    <div class="form-check">
+                     
+                      <input class="form-check-input" type="radio" name="gender">Other
+
+                    </div>
+                    <input class="form-check-input" type="checkbox">
+                    <label>
+                      Do You want to sumit Form Chect It
+                    </label>
+                    
+
+                  
+                  </div>
+                  <div>
+                    <button class="btn btn-primary">Sumbit</button>
+                  </div>
+
+                  
+
+                  
+
+                
+
+        
+                
+                
+                
+
+                
+
+
+                
+
+            </form>
+            </div>
+            <div class="col-md-6">
+                <h1> Reches Us</h1>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.824470985638!2d73.80199007496564!3d18.626963182487316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9424b44386f%3A0x7bcf6e817a60a636!2sFortune%20Cloud%20Technologies%20Pimpri!5e0!3m2!1sen!2sin!4v1735820297126!5m2!1sen!2sin"
+                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+
+    <script>
+      function validate(){
+        // Get form values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const Phone = document.getElementById("Phone").value.trim();
+        const AlternetPhone = document.getElementById("alternatePhoner").value.trim();
+        const message= document.getElementById("message").value.trim();
+
+        //Error  span
+        const nameerror =document.getElementById("nameError");
+        const emailerror =document.getElementById("emailError");
+        const Phoneerror =document.getElementById("PhoneError");
+        const alternetPhoneerror =document.getElementById("AlternatePhoneError");
+        const messageerror =document.getElementById("MessageError");
+
+        // clear previous error message
+
+        nameerror.textContent="";
+        emailerror.textContent="";
+        Phoneerror.textContent="";
+        alternetPhoneerror.textContent="";
+        messageerror.textContent="";
+
+        let isValid =true;
+
+        // validate fields
+
+        if (name == ""){
+          nameerror.textContent = "Please enter youer Name.";
+          isValid=false;
+        }else if(name.length<=2) {
+          nameerror.textContent="name must be at least 2 char";
+
+        }
+
+        if (email === "") {
+                emailerror.textContent = "Please enter your email.";
+                isValid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailError.textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+          if (Phone === "") {
+                Phoneerror.textContent = "Please enter your mobile number.";
+                isValid = false;
+            } else if (!/^\d{10}$/.test(Phone)) {
+                Phoneerror.textContent = "Please enter a valid 10-digit mobile number.";
+                isValid = false;
+            }
+            if (AlternetPhone === "") {
+                alternetPhoneerror.textContent = "Please enter your mobile number.";
+                isValid = false;
+            } else if (!/^\d{10}$/.test(alte)) {
+                alternetPhoneerror.textContent = "Please enter a valid 10-digit mobile number.";
+                isValid = false;
+            }
+          if (message === "") {
+                messageerror.textContent = "Please enter your message.";
+                isValid = false;
+          }
+          
+          if (isValid) {
+                alert("Form submitted successfully!");
+            }
+
+            return isValid; // Prevent form submission if invalid
+
+        }
+      
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
